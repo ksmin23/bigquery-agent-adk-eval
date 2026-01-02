@@ -107,3 +107,9 @@ The evaluation script uses the following Vertex AI metrics:
 - **Tool Use (Trajectory)**: Validates if the agent used the expected tools (e.g., `execute_sql`).
 
 Results are saved in the `eval_results/` directory as JSON files for detailed inspection.
+
+## References
+
+- [Build and Evaluate BigQuery Agents using ADK and GenAI Eval Service Codelab](https://codelabs.developers.google.com/bigquery-adk-eval#0)
+- [ADK Agents for BigQuery Series (2025-08-05)](https://medium.com/google-cloud/adk-agents-for-bigquery-series-40de8cf4e3ca)
+- [ADK Evaluation](https://google.github.io/adk-docs/evaluate/)
