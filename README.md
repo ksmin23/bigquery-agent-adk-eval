@@ -113,3 +113,5 @@ Results are saved in the `eval_results/` directory as JSON files for detailed in
 - [Build and Evaluate BigQuery Agents using ADK and GenAI Eval Service Codelab](https://codelabs.developers.google.com/bigquery-adk-eval#0)
 - [ADK Agents for BigQuery Series (2025-08-05)](https://medium.com/google-cloud/adk-agents-for-bigquery-series-40de8cf4e3ca)
 - [ADK Evaluation](https://google.github.io/adk-docs/evaluate/)
+- [User Simulation in ADK Evals](https://github.com/google/adk-samples/blob/main/python/notebooks/evaluation/user_simulation_in_adk_evals.ipynb)
+- [Announcing user simulation in ADK evaluation (2025-11-07)](https://developers.googleblog.com/en/announcing-user-simulation-in-adk-evaluation/)
