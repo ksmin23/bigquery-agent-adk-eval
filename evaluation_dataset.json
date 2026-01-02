@@ -1,0 +1,62 @@
+[
+  {
+    "prompt": "What tables are available in the dataset `ecommerce`?",
+    "reference": "The tables available in the dataset `ecommerce` are: `distribution_centers`, `events`, `inventory_items`, `order_items`, `orders`, `products`, and `users`."
+  },
+  {
+    "prompt": "How many users are there in total?",
+    "reference": "There are 100,000 users in total."
+  },
+  {
+    "prompt": "Find the email and age of the user with id 72685.",
+    "reference": "The email address of user 72685 is lindseybrennan@example.org and their age is 59."
+  },
+  {
+    "prompt": "How many orders have a status of Complete?",
+    "reference": "There are 31,077 orders with a status of 'complete'."
+  },
+  {
+    "prompt": "Which distribution center has the highest latitude, and what is it's latitude?",
+    "reference": "Chicago IL is the distribution center with the highest latitude, with a latitude of 41.84."
+  },
+  {
+    "prompt": "Retrieve the order id for all orders with a status of cancelled placed on the 1st June 2023 before 6am.",
+    "reference": "The order IDs for all orders with a status of 'cancelled' placed on the 1st June 2023 before 6am are: 26622, 49223"
+  },
+  {
+    "prompt": "What id the full name and user ids of the top 5 users with the most orders.",
+    "reference": "The top 5 users with the most orders are: Kristine Pennington (user ID 77359), Anthony Bright (user ID 4137), David Bean (user ID 30740), Michelle Wright (user ID 54563), and Matthew Reynolds (user ID 41136), each with 4 total orders."
+  },
+  {
+    "prompt": "Which distribution center is associated with the highest average retail price of its products, and what is the average retail price?",
+    "reference": "The distribution center associated with the highest average retail price of its products is Houston TX, with an average retail price of $69.74."
+  },
+  {
+    "prompt": "How many events were of type 'purchase' in Seoul during May 2024?",
+    "reference": "In May 2024, there were 57 'purchase' events recorded in Seoul."
+  },
+  {
+    "prompt": "For orders placed in June 2023, how many took three days or longer to be delivered after they were shipped?",
+    "reference": "In June 2023, there were 318 orders with a time difference of of 3 days or more between when they were shipped and delivered."
+  },
+  {
+    "prompt": "What are the names of the products and their respective retail price that have never been sold, but have a retail price greater than $210?",
+    "reference": "The products that have never been sold but have a retail price greater than $210 are:\n- Tommy Hilfiger Men's 2 Button Side Vent Windowpane Trim Fit Sport Coat, with a retail price of $249.9\n- MICHAEL Michael Kors Women's Hooded Leather Jacket: $211.11"
+  },
+  {
+    "prompt": "List the id and first name of users between the ages of 70 and 75 who have Facebook were sourced from Facebook and are located in California.",
+    "reference": "The users between the ages of 70 and 75 from California with 'Facebook' as their traffic source are:\n- Julie (ID: 25379)\n- Sherry (ID: 85196)\n- Kenneth (ID: 82238)\n- Lindsay (ID: 64079)\n- Matthew (ID: 99612)"
+  },
+  {
+    "prompt": "Identify the full name and user id of users over the age of 67 who live within 3.5 kilometers of any distribution_center.",
+    "reference": "The users over the age of 67 who live within 3.5 kilometers of any distribution center are:\n- William Campbell (user ID: 26082)\n- Becky Cantrell (user ID: 39008)"
+  },
+  {
+    "prompt": "What is the median age of users for each gender?",
+    "reference": "The median age for female users is 41, and the median age for male users is 41."
+  },
+  {
+    "prompt": "What is the average sale price of complete orders compared to returned orders, and what is the percentage difference (to two decimal places) between them?",
+    "reference": "The average sale price for 'Complete' orders was $59.56, while for 'Returned' orders it was $59.76. This represents a percentage difference of 0.34%."
+  }
+]
