@@ -104,7 +104,7 @@ bigquery-agent-adk-eval/
 The evaluation script uses the following Vertex AI metrics:
 - **Factual Accuracy**: Measures if the agent's response correctly reflects the facts in the reference answer.
 - **Completeness**: Measures if the agent's response provides all the essential information requested.
-- **Tool Use (Trajectory)**: Validates if the agent used the expected tools (e.g., `execute_sql`).
+- **Tool Use (Trajectory)**: Validates if the agent used the expected tools (e.g., `list_table_ids`).
 
 Results are saved in the `eval_results/` directory as JSON files for detailed inspection.
 
