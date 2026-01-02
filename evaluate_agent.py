@@ -1,5 +1,6 @@
 import uuid
 import pandas as pd
+import argparse
 from datetime import datetime
 from vertexai.preview.evaluation import EvalTask
 from vertexai.preview.evaluation.metrics import (
@@ -51,8 +52,8 @@ completeness_metric = PointwiseMetric(
 
 tool_use_metric = TrajectorySingleToolUse(tool_name="list_table_ids")
 
-def run_eval():
-   eval_dataset = pd.read_json("evaluation_dataset.json")
+def run_eval(dataset_path: str):
+   eval_dataset = pd.read_json(dataset_path)
 
    # Generate a unique run name
    current_time = datetime.now().strftime("%Y%m%d-%H%M%S")
@@ -83,4 +84,12 @@ def run_eval():
 
 
 if __name__ == "__main__":
-   run_eval()
+   parser = argparse.ArgumentParser(description="Run evaluation for BigQuery agent.")
+   parser.add_argument(
+       "--dataset", 
+       type=str, 
+       default="evaluation_dataset.json",
+       help="Path to the evaluation dataset JSON file."
+   )
+   args = parser.parse_args()
+   run_eval(args.dataset)
