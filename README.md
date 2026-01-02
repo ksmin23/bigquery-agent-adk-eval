@@ -44,7 +44,7 @@ This project demonstrates how to build a conversational analytics agent using [G
 
 ## BigQuery Data Setup
 
-The agent is designed to work with the `ecommerce` dataset based on the `thelook_ecommerce` public dataset. 
+The agent is designed to work with the `ecommerce` dataset based on the `thelook_ecommerce` public dataset. The following setup steps are sourced from the [Build and Evaluate BigQuery Agents using ADK and GenAI Eval Service Codelab](https://codelabs.developers.google.com/bigquery-adk-eval#3).
 
 1. **Create the dataset**:
    ```bash
@@ -62,6 +62,7 @@ The agent is designed to work with the `ecommerce` dataset based on the `thelook
    bq load --source_format=AVRO --autodetect ecommerce.inventory_items gs://sample-data-and-media/thelook_dataset_snapshot/inventory_items/*.avro.gz
    bq load --source_format=AVRO --autodetect ecommerce.distribution_centers gs://sample-data-and-media/thelook_dataset_snapshot/distribution_centers/*.avro.gz
    ```
+
 
 ## Usage
 
