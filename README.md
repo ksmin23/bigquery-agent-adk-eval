@@ -1,0 +1,89 @@
+# Build and Evaluate BigQuery Agents using Agent Development Kit (ADK) and GenAI Eval Service
+
+This project demonstrates how to build a conversational analytics agent using [Google's Agent Development Kit (ADK)](https://google.github.io/adk-docs/) that interacts with data stored in [BigQuery](https://cloud.google.com/bigquery). It also includes a comprehensive evaluation framework using [Vertex AI's GenAI Evaluation service](https://cloud.google.com/vertex-ai/docs/generative-ai/models/evaluation-overview).
+
+## Project Overview
+
+- **Agent Application**: A BigQuery data analysis agent that uses the `BigQueryToolset` to answer natural language questions by executing SQL queries.
+- **Evaluation Framework**: A structured way to measure the performance of your agent using metrics like Factual Accuracy, Completeness, and Tool Use Trajectory.
+
+## Prerequisites
+
+- A Google Cloud Project with billing enabled.
+- Enabled APIs: BigQuery API, Vertex AI API.
+- Python 3.10 or higher.
+
+## Setup
+
+1. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+   cd bigquery-agent-adk-eval
+   ```
+
+2. **Create and activate a virtual environment**:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   ```
+
+3. **Install dependencies**:
+   ```bash
+   pip install google-adk google-cloud-aiplatform[evaluation] pandas python-dotenv
+   ```
+
+4. **Configure environment variables**:
+   Create a `.env` file in the `data_agent_app/` directory (or use the one provided) with the following content:
+   ```env
+   GOOGLE_GENAI_USE_VERTEXAI=1
+   GOOGLE_CLOUD_PROJECT=your-project-id
+   GOOGLE_CLOUD_LOCATION=us-central1
+   ```
+
+## BigQuery Data Setup
+
+The agent is designed to work with the `ecommerce` dataset (based on the `thelook_ecommerce` public dataset). Ensure you have created the dataset and loaded the tables as described in the [Codelab](https://codelabs.developers.google.com/bigquery-adk-eval#2).
+
+## Usage
+
+### 1. Chat with the Agent (Web UI)
+Launch the built-in ADK web server to interact with your agent:
+```bash
+adk web
+```
+Then open the provided URL (usually `http://127.0.0.1:8000`) in your browser.
+
+### 2. Run Evaluation
+Execute the evaluation script to assess the agent's performance against the `evaluation_dataset.json`:
+```bash
+python evaluate_agent.py
+```
+
+You can also specify a custom evaluation dataset:
+```bash
+python evaluate_agent.py --dataset custom_dataset.json
+```
+
+## Project Structure
+
+```text
+bigquery-agent-adk-eval/
+├── data_agent_app/             # Main ADK application folder
+│   ├── agent.py                # Agent definition and toolset assignment
+│   ├── prompts.py              # System instructions for the agent
+│   └── .env                    # Environment configuration
+├── evaluate_agent.py           # Vertex AI Evaluation script
+├── evaluation_dataset.json     # Ground truth dataset for evaluation
+├── run_agent.py                # Logic for running agent conversations
+├── utils.py                    # Utility functions for evaluation and reporting
+└── requirements.txt            # Project dependencies
+```
+
+## Evaluation Metrics
+
+The evaluation script uses the following Vertex AI metrics:
+- **Factual Accuracy**: Measures if the agent's response correctly reflects the facts in the reference answer.
+- **Completeness**: Measures if the agent's response provides all the essential information requested.
+- **Tool Use (Trajectory)**: Validates if the agent used the expected tools (e.g., `execute_sql`).
+
+Results are saved in the `eval_results/` directory as JSON files for detailed inspection.
