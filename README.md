@@ -44,7 +44,24 @@ This project demonstrates how to build a conversational analytics agent using [G
 
 ## BigQuery Data Setup
 
-The agent is designed to work with the `ecommerce` dataset (based on the `thelook_ecommerce` public dataset). Ensure you have created the dataset and loaded the tables as described in the [Codelab](https://codelabs.developers.google.com/bigquery-adk-eval#2).
+The agent is designed to work with the `ecommerce` dataset based on the `thelook_ecommerce` public dataset. 
+
+1. **Create the dataset**:
+   ```bash
+   bq mk --dataset --location=US ecommerce
+   ```
+
+2. **Load the tables**:
+   Run the following commands to load the static snapshot of the dataset from the public GCS bucket:
+   ```bash
+   bq load --source_format=AVRO --autodetect ecommerce.events gs://sample-data-and-media/thelook_dataset_snapshot/events/*.avro.gz
+   bq load --source_format=AVRO --autodetect ecommerce.order_items gs://sample-data-and-media/thelook_dataset_snapshot/order_items/*.avro.gz
+   bq load --source_format=AVRO --autodetect ecommerce.products gs://sample-data-and-media/thelook_dataset_snapshot/products/*.avro.gz
+   bq load --source_format=AVRO --autodetect ecommerce.users gs://sample-data-and-media/thelook_dataset_snapshot/users/*.avro.gz
+   bq load --source_format=AVRO --autodetect ecommerce.orders gs://sample-data-and-media/thelook_dataset_snapshot/orders/*.avro.gz
+   bq load --source_format=AVRO --autodetect ecommerce.inventory_items gs://sample-data-and-media/thelook_dataset_snapshot/inventory_items/*.avro.gz
+   bq load --source_format=AVRO --autodetect ecommerce.distribution_centers gs://sample-data-and-media/thelook_dataset_snapshot/distribution_centers/*.avro.gz
+   ```
 
 ## Usage
 
