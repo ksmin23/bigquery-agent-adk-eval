@@ -1,5 +1,7 @@
 # Build and Evaluate BigQuery Agents using Agent Development Kit (ADK) and GenAI Eval Service
 
+> :information_source: This project is based on the **[Build and Evaluate BigQuery Agents using ADK and GenAI Eval Service Codelab](https://codelabs.developers.google.com/bigquery-adk-eval)**.
+
 This project demonstrates how to build a conversational analytics agent using [Google's Agent Development Kit (ADK)](https://google.github.io/adk-docs/) that interacts with data stored in [BigQuery](https://cloud.google.com/bigquery). It also includes a comprehensive evaluation framework using [Vertex AI's GenAI Evaluation service](https://cloud.google.com/vertex-ai/docs/generative-ai/models/evaluation-overview).
 
 ## Project Overview
