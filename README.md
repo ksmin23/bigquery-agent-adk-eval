@@ -115,4 +115,5 @@ Results are saved in the `eval_results/` directory as JSON files for detailed in
 - [ADK Evaluation](https://google.github.io/adk-docs/evaluate/)
 - [User Simulation in ADK Evals](https://github.com/google/adk-samples/blob/main/python/notebooks/evaluation/user_simulation_in_adk_evals.ipynb)
 - [Announcing user simulation in ADK evaluation (2025-11-07)](https://developers.googleblog.com/en/announcing-user-simulation-in-adk-evaluation/)
+- [Introducing agent evaluation in Vertex AI Gen AI Evaluation Service (2025-01-25)](https://cloud.google.com/blog/products/ai-machine-learning/introducing-agent-evaluation-in-vertex-ai-gen-ai-evaluation-service)
 - [Get started with Cloud API Registry](https://github.com/GoogleCloudPlatform/generative-ai/blob/main/agents/agent_engine/tutorial_get_started_with_cloud_api_registry.ipynb)
